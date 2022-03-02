@@ -40,10 +40,11 @@ CREATE TABLE IF NOT EXISTS "user"
     PRIMARY KEY ("idUser")
 );
 
+
 CREATE TABLE IF NOT EXISTS "games"
 (
     "idGame" integer NOT NULL DEFAULT nextval('"games_idGame_seq"'::regclass),
-    PRIMARY KEY ("idGame")
+    CONSTRAINT games_pkey PRIMARY KEY ("idGame")
 );
 
 CREATE TABLE IF NOT EXISTS "lang"
@@ -52,7 +53,7 @@ CREATE TABLE IF NOT EXISTS "lang"
     CONSTRAINT lang_pkey PRIMARY KEY ("codePays")
 );
 
-CREATE TABLE IF NOT EXISTS leaderboard
+CREATE TABLE IF NOT EXISTS "leaderboard"
 (
     "idGame" integer NOT NULL DEFAULT nextval('"leaderboard_idGame_seq"'::regclass),
     "idUser" uuid NOT NULL,
