@@ -40,10 +40,11 @@ CREATE TABLE IF NOT EXISTS "user"
     PRIMARY KEY ("idUser")
 );
 
+CREATE SEQUENCE games_idGame_seq START WITH 1;
 
 CREATE TABLE IF NOT EXISTS "games"
 (
-    "idGame" integer NOT NULL DEFAULT nextval('"games_idGame_seq"'::regclass),
+    "idGame" integer NOT NULL DEFAULT nextval('games_idGame_seq'),
     CONSTRAINT games_pkey PRIMARY KEY ("idGame")
 );
 
@@ -53,9 +54,11 @@ CREATE TABLE IF NOT EXISTS "lang"
     CONSTRAINT lang_pkey PRIMARY KEY ("codePays")
 );
 
+CREATE SEQUENCE leaderboard_idGame_seq START WITH 1;
+
 CREATE TABLE IF NOT EXISTS "leaderboard"
 (
-    "idGame" integer NOT NULL DEFAULT nextval('"leaderboard_idGame_seq"'::regclass),
+    "idGame" integer NOT NULL DEFAULT nextval('leaderboard_idGame_seq'),
     "idUser" uuid NOT NULL,
     score numeric(100,0) NOT NULL,
     "time" numeric(100,0) NOT NULL,
@@ -65,8 +68,6 @@ CREATE TABLE IF NOT EXISTS "leaderboard"
         ON DELETE CASCADE,
     CONSTRAINT "idUser" FOREIGN KEY ("idUser")
         REFERENCES public."user" ("idUser") MATCH FULL
-        ON UPDATE NO CASCADE
-        ON DELETE NO CASCADE
         NOT VALID
 );
 
@@ -82,4 +83,11 @@ CREATE TABLE "translate"
         ON DELETE NO ACTION
         NOT VALID
 );
+```
+
+If you want to delete all tables and sequences
+```sql
+drop table games,lang,leaderboard,translate,"user";
+
+drop sequence games_idGame_seq, leaderboard_idGame_seq;
 ```
