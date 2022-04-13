@@ -5,8 +5,8 @@ Les meilleurs joueurs se verront récompensé d’une fausse monnaie liée à no
 Le principe du jeux est en multijoueur mais chaque étape du jeu son en solo, la seule partie commune & en réseau est sur les classement faire un meilleur temps que l’autre.
 
 ## L'équipe
-[@Ceryuz (Enzo ROCAMORA)](https://github.com/Ceryuz)
-[@dragun06 (Dylan LAFAIRE)](https://github.com/dragun06)
-[@ninaboulton2 (Nina BOULTON)](https://github.com/ninaboulton2)
-[@florianbrrl (Florian BARRALI)](https://github.com/florianbrrl)
-[@ALonelyDuck (Clément COLIN)](https://github.com/ALonelyDuck)
+[@Ceryuz (Enzo ROCAMORA)](https://github.com/Ceryuz)  
+[@dragun06 (Dylan LAFAIRE)](https://github.com/dragun06)  
+[@ninaboulton2 (Nina BOULTON)](https://github.com/ninaboulton2)  
+[@florianbrrl (Florian BARRALI)](https://github.com/florianbrrl)  
+[@ALonelyDuck (Clément COLIN)](https://github.com/ALonelyDuck)  
