@@ -1,0 +1,1 @@
+var coul = {Jaune : "#FFFF00", Vert : "#32CD32", Rouge : "#FF0000", Bleu : "#0000FF", Marron : "#8B4513",Violet : "#9400D3"};
