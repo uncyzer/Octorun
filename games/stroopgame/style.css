@@ -1,0 +1,21 @@
+h1, h2{
+    text-align: center;
+}
+
+
+body {
+}
+
+
+
+div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+p {
+    font-weight: bold;
+    font-size: xx-large;
+    margin: 1em;
+}
