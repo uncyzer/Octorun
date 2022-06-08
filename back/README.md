@@ -1,14 +1,19 @@
 # Installation  
+
 ## Technologies  
+
 For this project we are using [node.js 16.9.1](https://nodejs.org/download/release/v16.9.1/) and [PostgreSQL 14.2](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)  
 
 ## First start
+
 In order to launch the project for the first time on your machine you need to copy the file `.env.sample` and change the PASSWORD line by the one inserted at the installation of PostgreSQL  
 
 ## PostgreSQL configuration
-You must execute the sql commands below : 
+
+You must execute the sql commands below :
 `psql -U postgres` Login as administrator of your database
-```
+
+```sql
 CREATE ROLE octorun WITH
   LOGIN
   NOSUPERUSER
@@ -18,7 +23,8 @@ CREATE ROLE octorun WITH
   NOREPLICATION
   PASSWORD 'yourpassword';
 ```
-```
+
+```sql
 CREATE DATABASE octorun
     WITH 
     OWNER = octorun
@@ -28,10 +34,12 @@ CREATE DATABASE octorun
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
 ```
-When you've created the database & the user leave the application and login back with taht command : 
+
+When you've created the database & the user leave the application and login back with taht command :
 `psql -U octorun`  
 
-Now create the tables 
+Now create the tables
+
 ```sql
 CREATE TABLE IF NOT EXISTS "user"
 (
@@ -86,6 +94,7 @@ CREATE TABLE "translate"
 ```
 
 If you want to delete all tables and sequences
+
 ```sql
 drop table games,lang,leaderboard,translate,"user";
 
