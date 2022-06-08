@@ -1,0 +1,35 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin-top: 2%;
+}
+
+.ligne {
+    display: flex;
+    /* text-align: center; */
+}
+
+.box > .ligne:nth-child(2) {
+    border-bottom: solid;
+}
+
+.box > .ligne:nth-child(3) {
+    border-bottom: solid;
+}
+
+.jeu:first-child {
+    border-right: solid;
+}
+
+.jeu:nth-child(2) {
+    border-right: solid;
+}
+
+button {
+    height: 50px;
+    width: 50px;
+    margin: 1%;
+    font-size: xx-large;
+}
